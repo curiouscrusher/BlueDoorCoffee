@@ -1,0 +1,97 @@
+// ===start of breakfast
+
+.breakfast {
+	background: linear-gradient(rgba(36, 41, 45, 0.8), rgba(36, 41, 45, 0.8)), url("images/restaurant-pic.jpg") fixed no-repeat; 
+	background-size:cover;
+}
+// header styling
+.breakfast-header{
+	position:relative;
+	text-align: center;
+
+	.logo {
+		width: 300px;
+	}
+}
+.breakfast .scroll-arrows-container {
+	position:absolute;
+	top:-60%;
+	right:3%;
+}
+
+// breakfast styling
+.column {
+	float:left;
+	width:50%;
+
+	h2 {
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+	}
+}
+.item-container {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+}
+.item {
+	margin:0 auto;
+	display:flex;
+	flex-direction: row;
+	margin-left:0;
+	margin-right:1rem;
+	padding:1rem;
+	// flex-wrap:wrap;
+
+	h4 {
+		color: white;
+		margin-right: 10px;
+	}
+}
+
+.title {
+	font-family: 'Helvetica Neue', sans-serif;
+	font-style: italic;
+	font-weight: 200;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.no-price {
+		flex-direction: column;
+	}
+
+.item-detail-price{
+	display:flex;
+	flex: 1;
+	justify-content:space-between;
+	p {
+		font-style:italic;
+	}
+}
+.name {
+	@include dish-name();
+}
+.name-detail {
+	display:flex;
+	justify-content:space-between;
+	@include dish-detail();	
+}
+.dots {
+	align-self: flex-end;
+	display:inline-block;
+	flex:1;
+	background: url('images/circle.svg') center center;
+	background-repeat: repeat-x;
+	height: 10px;
+	margin: 0 10px 0;
+	width: 100%;
+}
+.price {
+	@include dish-price();
+}
+.button-container {
+	text-align:center;
+}
+// ===================

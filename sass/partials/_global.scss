@@ -1,0 +1,234 @@
+body {
+	font-family:sans-serif;
+	color:white;
+	font-size:12px;
+	font-family: 'Open Sans', sans-serif;
+	background:$main-black;
+}
+h1 {
+	@include headers(5em, white);
+}
+nav h1 {
+	text-align:center;
+}
+// H2 STYLES
+h2 {
+	@include headers(4em, black);
+}
+h2 span {
+	color:$orange;
+}
+.h2-light {
+	@include headers(50px, $cream);
+	text-align:center;
+}
+.services h2,
+.contact-container h2 {
+	text-align:center;
+}
+// end of H2s
+h3 {
+	@include headers-alt(3em,$orange);
+	color:$orange;
+}
+h4 {
+	@include headers-alt(2em,$main-black);
+	margin:0;
+	color:$main-black;
+}
+h5 {
+	@include headers-alt(1em, $white);
+	margin:0;
+}
+.wrapper {
+	margin:0 auto;
+	// max-width:1000px;
+	padding:2% 5% 0;
+}
+#nav-check {
+	display:none;
+}
+// ARROWS
+.scroll-arrows .fa {
+	display:inline-block;
+	font-size:3rem;
+	&:hover {
+		color:$orange;
+		transition:all 0.5s ease;
+	}
+}
+.scroll-arrows .fa-angle-left {
+	margin-right:1rem;
+}
+// .profiles,
+.gallery,
+.services,
+.breakfast,
+.footer {
+	padding:0 5%;
+}
+
+.breakfast {
+	padding-bottom: 2em;
+}
+
+.services {
+	background: $white;
+}
+.profiles {
+	background: $cream;
+}
+.gallery,
+footer {
+	background: $blue;
+}
+
+.spacer {
+	margin: 2em 0;
+}
+
+@media (max-width:1000px){
+	// SERVICES STYLES
+	.meals {
+		width: 40%;
+		margin-bottom:2%;
+	}
+}
+
+@media (max-width:950px){
+	// NAV STYLES:
+
+	// FOOTER STYLES:
+	.footer-container {
+		bottom:0;
+	}
+
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	// BREAKFAST STYLES
+	.column {
+		float:none;
+		width: 100%;
+	}
+}
+@media (max-width:800px){
+
+	// BREAKFAST STYLES
+	.breakfast .scroll-arrows-container {
+		position:relative;
+		text-align:center;
+		margin-bottom:2rem;
+	}
+	.fa {
+		margin-top:0;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	// NAV STYLES
+
+	.default-nav {
+		display:none;
+		// display:block;
+	}
+	.menu-trigger,
+	.responsive-nav-container {
+		display:block;
+	}
+	.responsive-nav {
+		position:relative;
+		background:black;
+		width:80%;
+	}
+	.responsive-nav-container {
+		position:absolute;
+		width: 70%;
+	}
+
+	
+	// PROFILE STYLES
+	.profiles {
+		padding:2% 10%;
+
+	}
+	.profile-wrapper {
+		width: 80%;
+	}
+	.profiles-left {
+		float:none;
+		text-align:center;
+		padding-left:0;
+		width: 100%;
+		padding-bottom:3rem;
+		img {
+			width: 60%;
+			float:none;
+			margin-bottom:2rem;
+			margin-right:0;
+		}
+	}
+
+	.profile-info {
+		float:none;
+	}
+	.profiles-right {
+		display:none;
+	}
+	// GALLERY STYLES
+	.gallery img {
+		display:inline-block;
+		// width:48%;
+	}
+	.gallery-container {
+		justify-content:space-between;
+	}
+	// BREAKFAST STYLES
+	.column {
+		float:none;
+		width: 100%;
+	}
+}
+@media (max-width:650px){
+	// SPLASH STYLES
+	button {
+		margin:1rem auto;
+		width: 40%;
+	}
+	// SERVICES STYLES
+	.meals {
+		width: 100%;
+	}
+	// GALLERY STYLES
+	.photo-container {
+		margin: 1% auto;
+	}
+	.gallery ul li a:not(.disabled) {
+		border-right:none;
+	}
+	.gallery ul{
+		width: 100%;
+
+	 li {
+		float:none;
+		margin:2rem;
+		a {
+			float:none;
+			margin:1rem;
+
+			}
+		}
+	}
+	.gallery ul li a:not(.photo-trigger) {
+		display:none;
+	}
+	.photo-trigger {
+		display:block;
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
